@@ -27,15 +27,15 @@
 
 qc.dir.exists <- function(path=".", short=TRUE, stop=TRUE, quiet=FALSE)
 {
-  ## 1  Preamble
+  # 1  Preamble
   folder <- if(short) basename(path) else path
   if(!quiet)
     message("* checking '", folder, "' with qc.dir.exists ... ", appendLF=FALSE)
 
-  ## 2  Test
+  # 2  Test
   success <- dir.exists(path)
 
-  ## 3  Result
+  # 3  Result
   if(!success)
   {
     if(!quiet) message("ERROR")

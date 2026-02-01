@@ -27,17 +27,17 @@
 
 qc.boot.exists <- function(analysis=".", short=TRUE, stop=TRUE, quiet=FALSE)
 {
-  ## 1  Preamble
+  # 1  Preamble
   owd <- setwd(analysis)
   on.exit(setwd(owd))
   folder <- if(short) basename(analysis) else analysis
   if(!quiet)
     message("* checking '", folder, "' with qc.boot.exists ... ", appendLF=FALSE)
 
-  ## 2  Test
+  # 2  Test
   success <- dir.exists(boot.dir())
 
-  ## 3  Result
+  # 3  Result
   if(!success)
   {
     if(!quiet) message("ERROR")
