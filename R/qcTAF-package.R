@@ -10,7 +10,8 @@
 #' @details
 #' \emph{Quality control:}
 #' \tabular{ll}{
-#'   \code{\link{qc.dir.exists}} \tab directory exists
+#'   \code{\link{qc.boot.exists}} \tab boot directory exists\cr
+#'   \code{\link{qc.dir.exists}}  \tab directory exists
 #' }
 #'
 #' @author Arni Magnusson and Colin Millar.
