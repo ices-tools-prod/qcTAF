@@ -8,6 +8,12 @@
 \description{
 Tools to check TAF analyses.
 }
+\details{
+\emph{Quality control:}
+\tabular{ll}{
+  \code{\link{qc.dir.exists}} \tab directory exists
+}
+}
 \seealso{
 Useful links:
 \itemize{
