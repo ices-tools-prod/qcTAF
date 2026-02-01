@@ -31,5 +31,7 @@ qc.dir.exists("rjm-347d")
 
 }
 \seealso{
+\code{\link{qc}} runs all \code{qc.*} tests.
+
 \code{\link{qcTAF-package}} gives an overview of the package.
 }
