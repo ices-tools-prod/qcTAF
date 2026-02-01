@@ -22,6 +22,7 @@
 #' }
 #'
 #' @importFrom TAF boot.dir
+#'
 #' @export
 
 qc.boot.exists <- function(analysis=".", short=TRUE, stop=TRUE, quiet=FALSE)
