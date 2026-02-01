@@ -31,7 +31,7 @@ qc.dir.exists <- function(path=".", short=TRUE, stop=TRUE, quiet=FALSE)
     message("* checking '", folder, "' with qc.dir.exists ... ", appendLF=FALSE)
 
   ## 2  Test
-  success <- is.character(path) && dir.exists(path)
+  success <- dir.exists(path)
 
   ## 3  Result
   if(!success)
