@@ -52,6 +52,8 @@ qc <- function(x, short=TRUE, stop=TRUE, quiet=FALSE)
       s <- "dir exists"
     if(s == "" && !qc.boot.exists(x, short=short, stop=stop, quiet=quiet))
       s <- "boot exists"
+    if(s == "" && !qc.data.bib.exists(x, short=short, stop=stop, quiet=quiet))
+      s <- "DATA.bib exists"
   }
   else if(dir.exists(x))  # directory containing many TAF analyses
   {
