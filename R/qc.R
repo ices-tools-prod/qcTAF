@@ -40,7 +40,7 @@
 
 qc <- function(x, short=TRUE, stop=TRUE, quiet=FALSE)
 {
-  ## Print warnings as they occur, rather than all at the end
+  # Print warnings as they occur, rather than all at the end
   owarn <- options(warn=1); on.exit(options(owarn))
 
   if(suppressWarnings(qc.boot.exists(x, stop=FALSE, quiet=TRUE)))  # one TAF dir
