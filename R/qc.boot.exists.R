@@ -34,7 +34,8 @@ qc.boot.exists <- function(analysis=".", short=TRUE, stop=TRUE, quiet=FALSE)
   on.exit(setwd(owd))
   folder <- if(short) basename(analysis) else analysis
   if(!quiet)
-    message("* checking '", folder, "' with qc.boot.exists ... ", appendLF=FALSE)
+    message("* checking '", folder, "' with qc.boot.exists ... ",
+            appendLF=FALSE)
 
   # 2  Test
   success <- dir.exists(boot.dir())
