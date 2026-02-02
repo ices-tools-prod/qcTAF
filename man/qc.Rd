@@ -23,7 +23,7 @@ String indicating which test did not succeed, or a vector of strings if
 that file.
 }
 \description{
-Run all quality checks on one or more TAF analyses.
+Run all TAF requirement checks on one or more analyses.
 }
 \details{
 If \code{x} is a directory, \code{stop} is set to \code{FALSE} unless the
