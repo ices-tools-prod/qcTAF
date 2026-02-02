@@ -10,9 +10,10 @@
 #' @details
 #' \emph{Quality control:}
 #' \tabular{ll}{
-#'   \code{\link{qc}}             \tab run all quality checks\cr
-#'   \code{\link{qc.dir.exists}}  \tab directory exists\cr
-#'   \code{\link{qc.boot.exists}} \tab boot directory exists
+#'   \code{\link{qc}}                 \tab run all quality checks\cr
+#'   \code{\link{qc.dir.exists}}      \tab directory exists\cr
+#'   \code{\link{qc.boot.exists}}     \tab boot directory exists\cr
+#'   \code{\link{qc.data.bib.exists}} \tab \verb{DATA.bib} file exists
 #' }
 #'
 #' @author Arni Magnusson and Colin Millar.

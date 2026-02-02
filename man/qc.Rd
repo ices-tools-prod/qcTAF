@@ -46,5 +46,7 @@ The checks are run in the following order:
 
 \code{\link{qc.boot.exists}} checks if boot directory exists.
 
+\code{\link{qc.data.bib.exists}} checks if \verb{DATA.bib} file exists.
+
 \code{\link{qcTAF-package}} gives an overview of the package.
 }
