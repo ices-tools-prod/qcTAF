@@ -14,6 +14,8 @@
 #' (if \code{stop = FALSE}).
 #'
 #' @seealso
+#' \code{\link{qc}} runs all \code{qc.*} tests.
+#'
 #' \code{\link{qcTAF-package}} gives an overview of the package.
 #'
 #' @examples
