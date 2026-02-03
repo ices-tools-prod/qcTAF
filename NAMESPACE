@@ -3,6 +3,5 @@
 export(qc)
 export(qc.boot.exists)
 export(qc.data.bib.exists)
-export(qc.dir.exists)
 export(qc.software.bib.exists)
 importFrom(TAF,boot.dir)
