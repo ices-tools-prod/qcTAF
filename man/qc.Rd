@@ -4,16 +4,10 @@
 \alias{qc}
 \title{Quality Check}
 \usage{
-qc(x, short = TRUE, quiet = FALSE)
+qc(analysis = ".")
 }
 \arguments{
-\item{x}{directory containing a TAF analysis or a directory containing
-multiple TAF analyses.}
-
-\item{short}{whether to show the TAF directory name in a short
-\code{\link{basename}} format.}
-
-\item{quiet}{whether to suppress messages.}
+\item{analysis}{directory containing a TAF analysis.}
 }
 \value{
 Logical vector indicating the result from each test.
@@ -25,9 +19,6 @@ Run all TAF requirement checks on one or more analyses.
 \dontrun{
 # TAF analysis
 qc("rjm-347d")
-
-# Multiple TAF analyses
-qc("2026/wgnssk")
 }
 
 }
@@ -39,6 +30,8 @@ The checks are run in the following order:
 \code{\link{qc.boot.exists}} checks if boot directory exists.
 
 \code{\link{qc.data.bib.exists}} checks if \verb{DATA.bib} file exists.
+
+\code{\link{qc.software.bib.exists}} checks if \verb{DATA.bib} file exists.
 
 \code{\link{qcTAF-package}} gives an overview of the package.
 }
