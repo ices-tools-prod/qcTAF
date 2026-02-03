@@ -24,6 +24,8 @@
 qc.boot.exists <- function(analysis=".")
 {
   # 1  Preamble
+  if(!dir.exists(analysis))
+    return(FALSE)
   owd <- setwd(analysis)
   on.exit(setwd(owd))
 
