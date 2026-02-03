@@ -4,26 +4,16 @@
 \alias{qc.software.bib.exists}
 \title{SOFTWARE.bib Exists}
 \usage{
-qc.software.bib.exists(analysis = ".", short = TRUE, stop = TRUE,
-  quiet = FALSE)
+qc.software.bib.exists(analysis = ".")
 }
 \arguments{
 \item{analysis}{directory containing a TAF analysis.}
-
-\item{short}{whether to show the TAF directory name in a short
-\code{\link{basename}} format.}
-
-\item{stop}{whether to stop if test fails.}
-
-\item{quiet}{whether to suppress messages.}
 }
 \value{
-\code{TRUE} if test succeeds, otherwise an error message
-(if \code{stop = TRUE}) or \code{FALSE} and a warning message
-(if \code{stop = FALSE}).
+\code{TRUE} if test succeeds, otherwise \code{FALSE}.
 }
 \description{
-Assert that a \verb{SOFTWARE.bib} file exists.
+Check if a \verb{SOFTWARE.bib} file exists.
 }
 \examples{
 \dontrun{

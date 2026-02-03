@@ -1,17 +1,11 @@
 #' DATA.bib Exists
 #'
-#' Assert that a \verb{DATA.bib} file exists.
+#' Check if a \verb{DATA.bib} file exists.
 #'
 #' @param analysis directory containing a TAF analysis.
-#' @param short whether to show the TAF directory name in a short
-#'        \code{\link{basename}} format.
-#' @param stop whether to stop if test fails.
-#' @param quiet whether to suppress messages.
 #'
 #' @return
-#' \code{TRUE} if test succeeds, otherwise an error message
-#' (if \code{stop = TRUE}) or \code{FALSE} and a warning message
-#' (if \code{stop = FALSE}).
+#' \code{TRUE} if test succeeds, otherwise \code{FALSE}.
 #'
 #' @seealso
 #' \code{\link{qc}} runs all \code{qc.*} tests.
@@ -27,27 +21,15 @@
 #'
 #' @export
 
-qc.data.bib.exists <- function(analysis=".", short=TRUE, stop=TRUE, quiet=FALSE)
+qc.data.bib.exists <- function(analysis=".")
 {
   # 1  Preamble
   owd <- setwd(analysis)
   on.exit(setwd(owd))
-  folder <- if(short) basename(analysis) else analysis
-  if(!quiet)
-    message("* checking '", folder, "' with qc.data.bib.exists ... ",
-            appendLF=FALSE)
 
   # 2  Test
   success <- file.exists(file.path(boot.dir(), "DATA.bib"))
 
   # 3  Result
-  if(!success)
-  {
-    if(!quiet) message("ERROR")
-    msg <- paste0("'", folder, "' does not contain a DATA.bib file")
-    if(stop) stop(msg) else warning(msg)
-  }
-  else if(!quiet)
-    message("OK")
   success
 }

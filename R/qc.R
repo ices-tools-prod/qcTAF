@@ -6,22 +6,15 @@
 #'        multiple TAF analyses.
 #' @param short whether to show the TAF directory name in a short
 #'        \code{\link{basename}} format.
-#' @param stop whether to stop if test fails.
 #' @param quiet whether to suppress messages.
 #'
-#' @details
-#' If \code{x} is a directory, \code{stop} is set to \code{FALSE} unless the
-#' user passes an explicit \code{stop = TRUE}.
-#'
 #' @return
-#' String indicating which test did not succeed, or a vector of strings if
-#' \code{x} is a directory. A value of \code{""} means all tests succeeded for
-#' that file.
+#' Logical vector indicating the result from each test.
 #'
 #' @seealso
 #' The checks are run in the following order:
 #'
-#' \code{\link{qc.dir.exists}} checks if directory exists.
+#' \code{\link{dir.exists}} checks if directory exists.
 #'
 #' \code{\link{qc.boot.exists}} checks if boot directory exists.
 #'
@@ -40,19 +33,19 @@
 #'
 #' @export
 
-qc <- function(x, short=TRUE, stop=TRUE, quiet=FALSE)
+qc <- function(x, short=TRUE, quiet=FALSE)
 {
   # Print warnings as they occur, rather than all at the end
   owarn <- options(warn=1); on.exit(options(owarn))
 
-  if(suppressWarnings(qc.boot.exists(x, stop=FALSE, quiet=TRUE)))  # one TAF dir
+  if(qc.boot.exists(x))  # one TAF dir
   {
     s <- ""
-    if(s == "" && !qc.dir.exists(x, short=short, stop=stop, quiet=quiet))
+    if(s == "" && !dir.exists(x))
       s <- "dir exists"
-    if(s == "" && !qc.boot.exists(x, short=short, stop=stop, quiet=quiet))
+    if(s == "" && !qc.boot.exists(x))
       s <- "boot exists"
-    if(s == "" && !qc.data.bib.exists(x, short=short, stop=stop, quiet=quiet))
+    if(s == "" && !qc.data.bib.exists(x))
       s <- "DATA.bib exists"
   }
   else if(dir.exists(x))  # directory containing many TAF analyses
@@ -63,7 +56,7 @@ qc <- function(x, short=TRUE, stop=TRUE, quiet=FALSE)
     for(i in seq_along(folders))
     {
       if(!quiet) cat("[", i, "] ", folders[i], "\n", sep="")
-      s[i] <- qc(subdirs[i], short=short, stop=stop, quiet=quiet)
+      s[i] <- qc(subdirs[i], short=short, quiet=quiet)
     }
     names(s) <- folders
   }

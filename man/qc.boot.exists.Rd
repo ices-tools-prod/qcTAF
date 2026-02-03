@@ -4,26 +4,16 @@
 \alias{qc.boot.exists}
 \title{Boot Directory Exists}
 \usage{
-qc.boot.exists(analysis = ".", short = TRUE, stop = TRUE,
-  quiet = FALSE)
+qc.boot.exists(analysis = ".")
 }
 \arguments{
 \item{analysis}{directory containing a TAF analysis.}
-
-\item{short}{whether to show the TAF directory name in a short
-\code{\link{basename}} format.}
-
-\item{stop}{whether to stop if test fails.}
-
-\item{quiet}{whether to suppress messages.}
 }
 \value{
-\code{TRUE} if test succeeds, otherwise an error message
-(if \code{stop = TRUE}) or \code{FALSE} and a warning message
-(if \code{stop = FALSE}).
+\code{TRUE} if test succeeds, otherwise \code{FALSE}.
 }
 \description{
-Assert that a boot directory exists.
+Check if a boot directory exists.
 }
 \examples{
 \dontrun{

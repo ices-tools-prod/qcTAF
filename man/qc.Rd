@@ -4,7 +4,7 @@
 \alias{qc}
 \title{Quality Check}
 \usage{
-qc(x, short = TRUE, stop = TRUE, quiet = FALSE)
+qc(x, short = TRUE, quiet = FALSE)
 }
 \arguments{
 \item{x}{directory containing a TAF analysis or a directory containing
@@ -13,21 +13,13 @@ multiple TAF analyses.}
 \item{short}{whether to show the TAF directory name in a short
 \code{\link{basename}} format.}
 
-\item{stop}{whether to stop if test fails.}
-
 \item{quiet}{whether to suppress messages.}
 }
 \value{
-String indicating which test did not succeed, or a vector of strings if
-\code{x} is a directory. A value of \code{""} means all tests succeeded for
-that file.
+Logical vector indicating the result from each test.
 }
 \description{
 Run all TAF requirement checks on one or more analyses.
-}
-\details{
-If \code{x} is a directory, \code{stop} is set to \code{FALSE} unless the
-user passes an explicit \code{stop = TRUE}.
 }
 \examples{
 \dontrun{
@@ -42,7 +34,7 @@ qc("2026/wgnssk")
 \seealso{
 The checks are run in the following order:
 
-\code{\link{qc.dir.exists}} checks if directory exists.
+\code{\link{dir.exists}} checks if directory exists.
 
 \code{\link{qc.boot.exists}} checks if boot directory exists.
 

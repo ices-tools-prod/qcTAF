@@ -4,25 +4,16 @@
 \alias{qc.dir.exists}
 \title{Directory Exists}
 \usage{
-qc.dir.exists(path = ".", short = TRUE, stop = TRUE, quiet = FALSE)
+qc.dir.exists(path = ".")
 }
 \arguments{
 \item{path}{directory name.}
-
-\item{short}{whether to show the directory name in a short
-\code{\link{basename}} format.}
-
-\item{stop}{whether to stop if test fails.}
-
-\item{quiet}{whether to suppress messages.}
 }
 \value{
-\code{TRUE} if test succeeds, otherwise an error message
-(if \code{stop = TRUE}) or \code{FALSE} and a warning message
-(if \code{stop = FALSE}).
+\code{TRUE} if test succeeds, otherwise \code{FALSE}.
 }
 \description{
-Assert that a directory exists.
+Check if a directory exists.
 }
 \examples{
 \dontrun{
