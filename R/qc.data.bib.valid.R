@@ -31,7 +31,7 @@ qc.data.bib.valid <- function(analysis=".")
 
   # 2  Test
   bibfile <- file.path(boot.dir(), "DATA.bib")
-  bib <- try(read.bib(bibfile), silent=TRUE)
+  bib <- suppressWarnings(try(read.bib(bibfile), silent=TRUE))
   success <- !inherits(bib, "try-error") && !any(names(bib) == "NULL")
 
   # 3  Result
