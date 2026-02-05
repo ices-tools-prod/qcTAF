@@ -17,7 +17,7 @@
 #' qc.data.bib.valid("rjm-347d")
 #' }
 #'
-#' @importFrom TAF read.bib
+#' @importFrom TAF boot.dir read.bib
 #'
 #' @export
 

@@ -28,8 +28,6 @@
 #' qc("rjm-347d")
 #' }
 #'
-#' @importFrom stats setNames
-#'
 #' @export
 
 qc <- function(analysis=".")
@@ -40,14 +38,9 @@ qc <- function(analysis=".")
              "qc.data.bib.exists",
              "qc.data.bib.valid",
              "qc.software.bib.exists")
-  s <- setNames(rep(NA, length(tests)), tests)
 
   # 2  Test
-  s[1] <- get(tests[1])(analysis)
-  s[2] <- get(tests[2])(analysis)
-  s[3] <- get(tests[3])(analysis)
-  s[4] <- get(tests[4])(analysis)
-  s[5] <- get(tests[5])(analysis)
+  s <- sapply(tests, function(x) get(x)(analysis))
 
   # 3  Result
   s
