@@ -32,7 +32,11 @@ qc.data.bib.valid <- function(analysis=".")
   # 2  Test
   bibfile <- file.path(boot.dir(), "DATA.bib")
   bib <- suppressWarnings(try(read.bib(bibfile), silent=TRUE))
-  success <- !inherits(bib, "try-error") && !any(names(bib) == "NULL")
+  success <-
+    !inherits(bib, "try-error") &&    # bib file can be loaded
+    !any(names(bib) == "NULL") &&     # bib file contains entries
+    is.character(bib[[1]]$source) &&  # entry contains source element
+    nchar(bib[[1]]$source) > 0        # source element is not empty
 
   # 3  Result
   success
