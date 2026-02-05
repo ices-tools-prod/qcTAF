@@ -1,6 +1,6 @@
 #' Quality Check
 #'
-#' Run all TAF requirement checks on one or more analyses.
+#' Run all TAF checks for a given analysis.
 #'
 #' @param analysis directory containing a TAF analysis.
 #'

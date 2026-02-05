@@ -13,7 +13,7 @@ qc(analysis = ".")
 Logical vector indicating the result from each test.
 }
 \description{
-Run all TAF requirement checks on one or more analyses.
+Run all TAF checks for a given analysis.
 }
 \examples{
 \dontrun{
