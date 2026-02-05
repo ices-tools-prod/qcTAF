@@ -28,8 +28,6 @@ qc.data.bib.exists <- function(analysis=".")
     return(FALSE)
   owd <- setwd(analysis)
   on.exit(setwd(owd))
-  if(!dir.exists(boot.dir()))
-    return(FALSE)
 
   # 2  Test
   success <- file.exists(file.path(boot.dir(), "DATA.bib"))
