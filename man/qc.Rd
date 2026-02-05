@@ -33,6 +33,9 @@ The checks are run in the following order:
 
 \code{\link{qc.data.bib.valid}} checks if \verb{DATA.bib} is valid.
 
+\code{\link{qc.data.bib.entries}} checks if \verb{DATA.bib} entries have been
+processed.
+
 \code{\link{qc.software.bib.exists}} checks if \verb{SOFTWARE.bib} exists.
 
 \code{\link{qc.software.bib.valid}} checks if \verb{SOFTWARE.bib} is valid.
