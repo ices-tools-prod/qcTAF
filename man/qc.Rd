@@ -13,7 +13,7 @@ qc(analysis = ".")
 Logical vector indicating the result from each test.
 }
 \description{
-Run all TAF checks for a given analysis.
+Run all quality checks for a given analysis.
 }
 \examples{
 \dontrun{
@@ -29,11 +29,13 @@ The checks are run in the following order:
 
 \code{\link{qc.boot.exists}} checks if boot directory exists.
 
-\code{\link{qc.data.bib.exists}} checks if \verb{DATA.bib} file exists.
+\code{\link{qc.data.bib.exists}} checks if \verb{DATA.bib} exists.
 
 \code{\link{qc.data.bib.valid}} checks if \verb{DATA.bib} is valid.
 
-\code{\link{qc.software.bib.exists}} checks if \verb{DATA.bib} file exists.
+\code{\link{qc.software.bib.exists}} checks if \verb{SOFTWARE.bib} exists.
+
+\code{\link{qc.software.bib.valid}} checks if \verb{SOFTWARE.bib} is valid.
 
 \code{\link{qcTAF-package}} gives an overview of the package.
 }

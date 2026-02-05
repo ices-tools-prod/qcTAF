@@ -1,6 +1,6 @@
 #' Quality Check
 #'
-#' Run all TAF checks for a given analysis.
+#' Run all quality checks for a given analysis.
 #'
 #' @param analysis directory containing a TAF analysis.
 #'
@@ -14,11 +14,13 @@
 #'
 #' \code{\link{qc.boot.exists}} checks if boot directory exists.
 #'
-#' \code{\link{qc.data.bib.exists}} checks if \verb{DATA.bib} file exists.
+#' \code{\link{qc.data.bib.exists}} checks if \verb{DATA.bib} exists.
 #'
 #' \code{\link{qc.data.bib.valid}} checks if \verb{DATA.bib} is valid.
 #'
-#' \code{\link{qc.software.bib.exists}} checks if \verb{DATA.bib} file exists.
+#' \code{\link{qc.software.bib.exists}} checks if \verb{SOFTWARE.bib} exists.
+#'
+#' \code{\link{qc.software.bib.valid}} checks if \verb{SOFTWARE.bib} is valid.
 #'
 #' \code{\link{qcTAF-package}} gives an overview of the package.
 #'
@@ -37,7 +39,8 @@ qc <- function(analysis=".")
              "qc.boot.exists",
              "qc.data.bib.exists",
              "qc.data.bib.valid",
-             "qc.software.bib.exists")
+             "qc.software.bib.exists",
+             "qc.software.bib.valid")
 
   # 2  Test
   s <- sapply(tests, function(x) get(x)(analysis))
