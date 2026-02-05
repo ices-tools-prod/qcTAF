@@ -14,6 +14,7 @@ Tools to check TAF analyses.
   \code{\link{qc}}                    \tab run all TAF requirement checks\cr
   \code{\link{qc.boot.exists}}        \tab boot directory exists\cr
   \code{\link{qc.data.bib.exists}}    \tab \verb{DATA.bib} file exists\cr
+  \code{\link{qc.data.bib.valid}}     \tab \verb{DATA.bib} file valid\cr
   \code{\link{qc.software.bib.exists}}\tab \verb{SOFTWARE.bib} file exists
 }
 }

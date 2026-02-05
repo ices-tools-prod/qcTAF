@@ -16,6 +16,8 @@
 #'
 #' \code{\link{qc.data.bib.exists}} checks if \verb{DATA.bib} file exists.
 #'
+#' \code{\link{qc.data.bib.valid}} checks if \verb{DATA.bib} is valid.
+#'
 #' \code{\link{qc.software.bib.exists}} checks if \verb{DATA.bib} file exists.
 #'
 #' \code{\link{qcTAF-package}} gives an overview of the package.
@@ -36,6 +38,7 @@ qc <- function(analysis=".")
   tests <- c("dir.exists",
              "qc.boot.exists",
              "qc.data.bib.exists",
+             "qc.data.bib.valid",
              "qc.software.bib.exists")
   s <- setNames(rep(NA, length(tests)), tests)
 
@@ -44,6 +47,7 @@ qc <- function(analysis=".")
   s[2] <- get(tests[2])(analysis)
   s[3] <- get(tests[3])(analysis)
   s[4] <- get(tests[4])(analysis)
+  s[5] <- get(tests[5])(analysis)
 
   # 3  Result
   s

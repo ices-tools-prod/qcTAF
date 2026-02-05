@@ -31,6 +31,8 @@ The checks are run in the following order:
 
 \code{\link{qc.data.bib.exists}} checks if \verb{DATA.bib} file exists.
 
+\code{\link{qc.data.bib.valid}} checks if \verb{DATA.bib} is valid.
+
 \code{\link{qc.software.bib.exists}} checks if \verb{DATA.bib} file exists.
 
 \code{\link{qcTAF-package}} gives an overview of the package.
