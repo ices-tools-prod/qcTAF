@@ -1,6 +1,6 @@
 #' DATA.bib Valid
 #'
-#' Check if a \verb{DATA.bib} file valid.
+#' Check if a \verb{DATA.bib} file is valid.
 #'
 #' @param analysis directory containing a TAF analysis.
 #'

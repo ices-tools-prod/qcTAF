@@ -13,7 +13,7 @@ qc.data.bib.valid(analysis = ".")
 \code{TRUE} if test succeeds, otherwise \code{FALSE}.
 }
 \description{
-Check if a \verb{DATA.bib} file valid.
+Check if a \verb{DATA.bib} file is valid.
 }
 \examples{
 \dontrun{
