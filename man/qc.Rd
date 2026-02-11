@@ -43,5 +43,7 @@ processed.
 \code{\link{qc.software.bib.entries}} checks if \verb{SOFTWARE.bib} entries
 have been processed.
 
+\code{\link{qc.scripts.exist}} checks if scripts exist.
+
 \code{\link{qcTAF-package}} gives an overview of the package.
 }

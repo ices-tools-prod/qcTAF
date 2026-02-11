@@ -28,6 +28,8 @@
 #' \code{\link{qc.software.bib.entries}} checks if \verb{SOFTWARE.bib} entries
 #' have been processed.
 #'
+#' \code{\link{qc.scripts.exist}} checks if scripts exist.
+#'
 #' \code{\link{qcTAF-package}} gives an overview of the package.
 #'
 #' @examples
@@ -48,7 +50,8 @@ qc <- function(analysis=".")
              "qc.data.bib.entries",
              "qc.software.bib.exists",
              "qc.software.bib.valid",
-             "qc.software.bib.entries")
+             "qc.software.bib.entries",
+             "qc.scripts.exist")
 
   # 2  Test
   s <- sapply(tests, function(x) get(x)(analysis))
