@@ -34,7 +34,6 @@
 #'
 #' @examples
 #' \dontrun{
-#' # TAF analysis
 #' qc("rjm-347d")
 #' }
 #'

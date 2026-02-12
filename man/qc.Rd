@@ -17,7 +17,6 @@ Run all quality checks for a given analysis.
 }
 \examples{
 \dontrun{
-# TAF analysis
 qc("rjm-347d")
 }
 

@@ -18,7 +18,7 @@ Check if TAF scripts (\verb{data.R}, \verb{model.R}, \verb{output.R}, and
 }
 \examples{
 \dontrun{
-qc.boot.exists("rjm-347d")
+qc.scripts.exist("rjm-347d")
 }
 
 }

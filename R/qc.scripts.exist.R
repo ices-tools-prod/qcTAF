@@ -15,7 +15,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' qc.boot.exists("rjm-347d")
+#' qc.scripts.exist("rjm-347d")
 #' }
 #'
 #' @importFrom TAF model.script
