@@ -30,6 +30,8 @@
 #'
 #' \code{\link{qc.scripts.exist}} checks if scripts exist.
 #'
+#' \code{\link{qc.relative.paths}} checks if scripts use relative paths.
+#'
 #' \code{\link{qcTAF-package}} gives an overview of the package.
 #'
 #' @examples
@@ -50,7 +52,8 @@ qc <- function(analysis=".")
              "qc.software.bib.exists",
              "qc.software.bib.valid",
              "qc.software.bib.entries",
-             "qc.scripts.exist")
+             "qc.scripts.exist",
+             "qc.relative.paths")
 
   # 2  Test
   s <- sapply(tests, function(x) get(x)(analysis))

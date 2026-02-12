@@ -44,5 +44,7 @@ have been processed.
 
 \code{\link{qc.scripts.exist}} checks if scripts exist.
 
+\code{\link{qc.relative.paths}} checks if scripts use relative paths.
+
 \code{\link{qcTAF-package}} gives an overview of the package.
 }
