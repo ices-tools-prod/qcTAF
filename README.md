@@ -6,7 +6,7 @@ TAF complete analyses are characterized by the following criteria:
 
 2. The boot folder must contain a `DATA.bib` file, declaring the initial data used as a starting point in the analysis. The boot folder may also contain a `SOFTWARE.bib` file.
 
-3. After running the TAF function `taf.boot()`, data files must be present in the `boot/data` folder, corresponding to the declarations in the `DATA.bib` file. Similarly, after running `taf.boot()`, software files must be present in the `boot/software` folder if a `SOFTWARE.bib` file exists.
+3. Files inside the `boot/data` folder must be declared in the `DATA.bib` file.
 
 4. If files exist both in `boot/initial/data` and the `boot/data` folder, then the file contents should be identical.
 
@@ -22,6 +22,8 @@ The above criteria can be evaluated by examining files and folders without runni
 
 9.* Regardless of which data and result files are stored online on GitHub, it should be possible to clone the analysis to a local computer and perform a full clean before rerunning the analysis successfully. A full clean consists of running the TAF functions `clean.boot(force=TRUE)` for the boot folder and `clean()` for the folders produced by the TAF scripts. A successful rerun of the analysis consists of running taf.boot() and source.all() without errors, producing the same or similar results as the original analysis.
 
-10.* The TAF scripts (`data.R`, `model.R`, `output.R`, `report.R`) should run sequentially, with each script starting by reading files from a previous step and ending by writing out files.
+10.* After running the TAF function `taf.boot()`, data files must be present in the `boot/data` folder, corresponding to the declarations in the `DATA.bib` file. Similarly, after running `taf.boot()`, software files must be present in the `boot/software` folder if a `SOFTWARE.bib` file exists.
 
-11.* The `data.R` script should create the data folder and write files into that folder. Likewise, the `model.R`, `output.R`, and `report.R` scripts should create and write into the corresponding folders.
+11.* The TAF scripts (`data.R`, `model.R`, `output.R`, `report.R`) should run sequentially, with each script starting by reading files from a previous step and ending by writing out files.
+
+12.* The `data.R` script should create the data folder and write files into that folder. Likewise, the `model.R`, `output.R`, and `report.R` scripts should create and write into the corresponding folders.
