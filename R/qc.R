@@ -4,8 +4,7 @@
 #'
 #' @param analysis directory containing a TAF analysis.
 #'
-#' @return
-#' Logical vector indicating the result from each test.
+#' @return Logical vector indicating the result from each test.
 #'
 #' @seealso
 #' The checks are run in the following order:

@@ -5,8 +5,7 @@
 #'
 #' @param analysis directory containing a TAF analysis.
 #'
-#' @return
-#' \code{TRUE} if test succeeds, otherwise \code{FALSE}.
+#' @return \code{TRUE} if test succeeds, otherwise \code{FALSE}.
 #'
 #' @seealso
 #' \code{\link{qc}} runs all \code{qc.*} tests.
