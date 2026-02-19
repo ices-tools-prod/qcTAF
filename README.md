@@ -8,7 +8,7 @@ TAF complete analyses are characterized by the following criteria:
 
 3. After running the TAF function `taf.boot()`, data files must be present in the `boot/data` folder, corresponding to the declarations in the `DATA.bib` file. Similarly, after running `taf.boot()`, software files must be present in the `boot/software` folder if a `SOFTWARE.bib` file exists.
 
-4. If files exist both in the `boot/data` folder and `boot/initial/data` folder, then the file contents should be identical.
+4. If files exist both in `boot/initial/data` and the `boot/data` folder, then the file contents should be identical.
 
 5. The main analysis folder should contain TAF scripts named `data.R`, `model.R`, `output.R`, and `report.R`. These scripts may call other R scripts and/or dynamic reports with file extensions such as `*.qmd`, `*.Rmd`, or `*.rmd`. For some analyses, the model script may be named `method.R`.
 
