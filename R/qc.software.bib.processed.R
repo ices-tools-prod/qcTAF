@@ -17,7 +17,7 @@
 #' qc.software.bib.processed("rjm-347d")
 #' }
 #'
-#' @importFrom TAF boot.dir read.bib
+#' @importFrom TAF boot.dir taf.sources
 #'
 #' @export
 
@@ -28,16 +28,12 @@ qc.software.bib.processed <- function(analysis=".")
     return(FALSE)
   owd <- setwd(analysis)
   on.exit(setwd(owd))
-  bibfile <- file.path(boot.dir(), "SOFTWARE.bib")
-  bib <- suppressWarnings(try(read.bib(bibfile), silent=TRUE))
-  if(inherits(bib, "try-error") ||      # bib file can be loaded
-     any(names(bib) == "NULL") ||       # bib file contains entries
-     !is.character(bib[[1]]$source) ||  # entry contains source element
-     nchar(bib[[1]]$source) == 0)       # source element is not empty
+  bib <- suppressWarnings(try(taf.sources("software"), silent=TRUE))
+  if(inherits(bib, "try-error"))
     return(FALSE)
 
   # 2  Test
-  entries <- names(read.bib(bibfile))
+  entries <- names(bib)
   filenames <- file.path(boot.dir(), "software", entries)
   success <- all(file.exists(filenames))
 

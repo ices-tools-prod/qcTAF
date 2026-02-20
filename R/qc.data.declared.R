@@ -51,14 +51,15 @@ qc.data.declared <- function(analysis=".")
   owd <- setwd(analysis)
   on.exit(setwd(owd))
   files <- dir(file.path(boot.dir(), "data"))
-  if(length(files) == 0)  # no files inside boot/data => 'all' were declared
+  if(length(files) == 0)  # no files inside boot/data, so 'all' were declared
     return(TRUE)
   bib <- suppressWarnings(try(taf.sources("data"), silent=TRUE))
-  if(inherits(bib,"try-error") || any(names(bib)=="NULL"))  # bib is broken
+  if(inherits(bib, "try-error"))
     return(FALSE)
 
   # 2  Test
-  success <- all(files %in% names(bib))
+  entries <- names(bib)
+  success <- all(files %in% entries)
 
   # 3  Result
   success
