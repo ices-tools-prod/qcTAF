@@ -35,6 +35,8 @@ The checks are run in the following order:
 \code{\link{qc.data.bib.processed}} checks if \verb{DATA.bib} entries have
 been processed.
 
+\code{\link{qc.data.declared}} checks if data files are declared.
+
 \code{\link{qc.software.bib.exists}} checks if \verb{SOFTWARE.bib} exists.
 
 \code{\link{qc.software.bib.valid}} checks if \verb{SOFTWARE.bib} is valid.

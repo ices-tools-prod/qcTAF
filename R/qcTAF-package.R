@@ -15,6 +15,7 @@
 #'   \code{\link{qc.data.bib.exists}}      \tab \verb{DATA.bib} exists\cr
 #'   \code{\link{qc.data.bib.valid}}       \tab \verb{DATA.bib} is valid\cr
 #'   \code{\link{qc.data.bib.processed}}   \tab \verb{DATA.bib} processed\cr
+#'   \code{\link{qc.data.declared}}        \tab data files are declared\cr
 #'   \code{\link{qc.software.bib.exists}}  \tab \verb{SOFTWARE.bib} exists\cr
 #'   \code{\link{qc.software.bib.valid}}   \tab \verb{SOFTWARE.bib} is valid\cr
 #'   \code{\link{qc.software.bib.processed}}\tab\verb{SOFTWARE.bib} processed\cr

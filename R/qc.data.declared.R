@@ -1,7 +1,7 @@
-#' DATA.bib Processed
+#' Data Declared
 #'
-#' Check if a \verb{DATA.bib} entries appear to have been processed, i.e., found
-#' as files and directories inside the boot folder.
+#' Check if all files in the boot data folder are declared in the
+#' \verb{DATA.bib} file.
 #'
 #' @param analysis directory containing a TAF analysis.
 #'
@@ -36,32 +36,29 @@
 #'
 #' @examples
 #' \dontrun{
-#' qc.data.bib.processed("rjm-347d")
+#' qc.data.declared("rjm-347d")
 #' }
 #'
-#' @importFrom TAF boot.dir read.bib
+#' @importFrom TAF boot.dir taf.sources
 #'
 #' @export
 
-qc.data.bib.processed <- function(analysis=".")
+qc.data.declared <- function(analysis=".")
 {
   # 1  Preamble
   if(!dir.exists(analysis))
     return(FALSE)
   owd <- setwd(analysis)
   on.exit(setwd(owd))
-  bibfile <- file.path(boot.dir(), "DATA.bib")
-  bib <- suppressWarnings(try(read.bib(bibfile), silent=TRUE))
-  if(inherits(bib, "try-error") ||      # bib file can be loaded
-     any(names(bib) == "NULL") ||       # bib file contains entries
-     !is.character(bib[[1]]$source) ||  # entry contains source element
-     nchar(bib[[1]]$source) == 0)       # source element is not empty
+  files <- dir(file.path(boot.dir(), "data"))
+  if(length(files) == 0)  # no files inside boot/data => 'all' were declared
+    return(TRUE)
+  bib <- suppressWarnings(try(taf.sources("data"), silent=TRUE))
+  if(inherits(bib,"try-error") || any(names(bib)=="NULL"))  # bib is broken
     return(FALSE)
 
   # 2  Test
-  entries <- names(read.bib(bibfile))
-  filenames <- file.path(boot.dir(), "data", entries)
-  success <- all(file.exists(filenames))
+  success <- all(files %in% names(bib))
 
   # 3  Result
   success
