@@ -24,7 +24,7 @@
 #'
 #' \code{\link{qc.software.bib.valid}} checks if \verb{SOFTWARE.bib} is valid.
 #'
-#' \code{\link{qc.software.bib.entries}} checks if \verb{SOFTWARE.bib} entries
+#' \code{\link{qc.software.bib.processed}} checks if \verb{SOFTWARE.bib} entries
 #' have been processed.
 #'
 #' \code{\link{qc.initial.data}} checks if initial data files have the same
@@ -53,7 +53,7 @@ qc <- function(analysis=".")
              "qc.data.bib.processed",
              "qc.software.bib.exists",
              "qc.software.bib.valid",
-             "qc.software.bib.entries",
+             "qc.software.bib.processed",
              "qc.initial.data",
              "qc.scripts.exist",
              "qc.relative.paths")

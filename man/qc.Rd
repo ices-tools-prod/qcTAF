@@ -39,7 +39,7 @@ been processed.
 
 \code{\link{qc.software.bib.valid}} checks if \verb{SOFTWARE.bib} is valid.
 
-\code{\link{qc.software.bib.entries}} checks if \verb{SOFTWARE.bib} entries
+\code{\link{qc.software.bib.processed}} checks if \verb{SOFTWARE.bib} entries
 have been processed.
 
 \code{\link{qc.initial.data}} checks if initial data files have the same
