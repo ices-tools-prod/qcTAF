@@ -31,10 +31,11 @@ qc.software.bib.processed <- function(analysis=".")
   bib <- suppressWarnings(try(taf.sources("software"), silent=TRUE))
   if(inherits(bib, "try-error"))
     return(FALSE)
+  files <- dir(file.path(boot.dir(), "software"))
+  files <- sub("_[0-9a-f]{7}\\.tar\\.gz", "", files)  # strip _hash.tar.gz
 
   # 2  Test
   entries <- names(bib)
-  filenames <- file.path(boot.dir(), "software", entries)
   success <- all(file.exists(filenames))
 
   # 3  Result
