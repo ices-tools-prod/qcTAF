@@ -53,11 +53,11 @@ qc.data.bib.processed <- function(analysis=".")
   bib <- suppressWarnings(try(taf.sources("data"), silent=TRUE))
   if(inherits(bib, "try-error"))
     return(FALSE)
+  files <- dir(file.path(boot.dir(), "data"))
 
   # 2  Test
   entries <- names(bib)
-  filenames <- file.path(boot.dir(), "data", entries)
-  success <- all(file.exists(filenames))
+  success <- all(entries %in% files)
 
   # 3  Result
   success
