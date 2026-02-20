@@ -52,7 +52,7 @@ qc.software.declared <- function(analysis=".")
   on.exit(setwd(owd))
   files <- dir(file.path(boot.dir(), "software"))
   files <- sub("_[0-9a-f]{7}\\.tar\\.gz", "", files)  # strip _hash.tar.gz
-  if(length(files) == 0)  # no files inside boot/software, so 'all' were declared
+  if(length(files) == 0)  # no files inside boot/software, so all were declared
     return(TRUE)
   bib <- suppressWarnings(try(taf.sources("software"), silent=TRUE))
   if(inherits(bib, "try-error"))
