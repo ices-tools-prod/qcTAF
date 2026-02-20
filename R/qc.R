@@ -27,6 +27,9 @@
 #' \code{\link{qc.software.bib.entries}} checks if \verb{SOFTWARE.bib} entries
 #' have been processed.
 #'
+#' \code{\link{qc.initial.data}} checks if initial data files have the same
+#' contents as boot data files.
+#'
 #' \code{\link{qc.scripts.exist}} checks if scripts exist.
 #'
 #' \code{\link{qc.relative.paths}} checks if scripts use relative paths.
@@ -51,6 +54,7 @@ qc <- function(analysis=".")
              "qc.software.bib.exists",
              "qc.software.bib.valid",
              "qc.software.bib.entries",
+             "qc.initial.data",
              "qc.scripts.exist",
              "qc.relative.paths")
 
