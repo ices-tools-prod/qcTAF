@@ -10,7 +10,7 @@ TAF complete analyses are characterized by the following criteria:
 
 4. If files exist both in `boot/initial/data` and the `boot/data` folder, then the file contents should be identical.
 
-5. Files and folders inside the `boot/data` folder must be declared in the `DATA.bib` file.
+5. Files and folders inside the `boot/data` folder must be declared in the `DATA.bib` file. Similarly, files and folders inside the `boot/software` folder must be declared in the `SOFTWARE.bib` file.
 
 6. The main analysis folder should contain TAF scripts named `data.R`, `model.R`, `output.R`, and `report.R`. These scripts may call other R scripts and/or dynamic reports with file extensions such as `*.qmd`, `*.Rmd`, or `*.rmd`. For some analyses, the model script may be named `method.R`.
 
