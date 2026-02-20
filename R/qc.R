@@ -29,6 +29,8 @@
 #' \code{\link{qc.software.bib.processed}} checks if \verb{SOFTWARE.bib} entries
 #' have been processed.
 #'
+#' \code{\link{qc.data.declared}} checks if software files are declared.
+#'
 #' \code{\link{qc.initial.data}} checks if initial data files have the same
 #' contents as boot data files.
 #'
@@ -57,6 +59,7 @@ qc <- function(analysis=".")
              "qc.software.bib.exists",
              "qc.software.bib.valid",
              "qc.software.bib.processed",
+             "qc.software.declared",
              "qc.initial.data",
              "qc.scripts.exist",
              "qc.relative.paths")

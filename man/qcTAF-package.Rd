@@ -20,6 +20,7 @@ Tools to check TAF analyses.
   \code{\link{qc.software.bib.exists}}  \tab \verb{SOFTWARE.bib} exists\cr
   \code{\link{qc.software.bib.valid}}   \tab \verb{SOFTWARE.bib} is valid\cr
   \code{\link{qc.software.bib.processed}}\tab\verb{SOFTWARE.bib} processed\cr
+  \code{\link{qc.software.declared}}    \tab software files are declared\cr
   \code{\link{qc.initial.data}}         \tab initial data files\cr
   \code{\link{qc.relative.paths}}       \tab scripts use relative paths\cr
   \code{\link{qc.scripts.exist}}        \tab scripts exist
