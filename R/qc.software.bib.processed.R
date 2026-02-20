@@ -36,7 +36,7 @@ qc.software.bib.processed <- function(analysis=".")
 
   # 2  Test
   entries <- names(bib)
-  success <- all(file.exists(filenames))
+  success <- all(entries %in% files)
 
   # 3  Result
   success
