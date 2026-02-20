@@ -2,8 +2,8 @@
 
 export(qc)
 export(qc.boot.exists)
-export(qc.data.bib.entries)
 export(qc.data.bib.exists)
+export(qc.data.bib.processed)
 export(qc.data.bib.valid)
 export(qc.initial.data)
 export(qc.relative.paths)

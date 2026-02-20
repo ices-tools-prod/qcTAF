@@ -17,8 +17,8 @@
 #'
 #' \code{\link{qc.data.bib.valid}} checks if \verb{DATA.bib} is valid.
 #'
-#' \code{\link{qc.data.bib.entries}} checks if \verb{DATA.bib} entries have been
-#' processed.
+#' \code{\link{qc.data.bib.processed}} checks if \verb{DATA.bib} entries have
+#' been processed.
 #'
 #' \code{\link{qc.software.bib.exists}} checks if \verb{SOFTWARE.bib} exists.
 #'
@@ -50,7 +50,7 @@ qc <- function(analysis=".")
              "qc.boot.exists",
              "qc.data.bib.exists",
              "qc.data.bib.valid",
-             "qc.data.bib.entries",
+             "qc.data.bib.processed",
              "qc.software.bib.exists",
              "qc.software.bib.valid",
              "qc.software.bib.entries",

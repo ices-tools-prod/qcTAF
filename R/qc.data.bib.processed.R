@@ -1,4 +1,4 @@
-#' DATA.bib Entries
+#' DATA.bib Processed
 #'
 #' Check if a \verb{DATA.bib} entries appear to have been processed, i.e., found
 #' as files and directories inside the boot folder.
@@ -14,14 +14,14 @@
 #'
 #' @examples
 #' \dontrun{
-#' qc.data.bib.entries("rjm-347d")
+#' qc.data.bib.processed("rjm-347d")
 #' }
 #'
 #' @importFrom TAF boot.dir read.bib
 #'
 #' @export
 
-qc.data.bib.entries <- function(analysis=".")
+qc.data.bib.processed <- function(analysis=".")
 {
   # 1  Preamble
   if(!dir.exists(analysis))
