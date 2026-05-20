@@ -9,5 +9,5 @@ Description: Tools to check TAF analyses.
 License: GPL-3
 URL: https://github.com/ices-tools-prod/qcTAF
 Encoding: UTF-8
-RoxygenNote: 7.3.3
+Config/roxygen2/version: 8.0.0
 Roxygen: list(old_usage=TRUE)
