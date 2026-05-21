@@ -1,3 +1,12 @@
+# qcTAF 2026.05.22
+
+* Renamed function qc.relative.paths() to qc.only.relative.paths().
+
+* Changed function qc.only.relative.paths() to identify /home/ as absolute path.
+
+
+
+
 # qcTAF 2026.02.21
 
 * Added functions qc.data.declared(), qc.software.declared(), and
