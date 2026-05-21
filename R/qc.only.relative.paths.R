@@ -1,4 +1,4 @@
-#' Relative Paths
+#' Only Relative Paths
 #'
 #' Check if scripts (\verb{*.R}, \verb{*.Rmd}, \verb{*.qmd} use only relative
 #' paths.
@@ -14,14 +14,14 @@
 #'
 #' @examples
 #' \dontrun{
-#' qc.relative.paths("rjm-347d")
+#' qc.only.relative.paths("rjm-347d")
 #' }
 #'
 #' @importFrom TAF model.script
 #'
 #' @export
 
-qc.relative.paths <- function(analysis=".")
+qc.only.relative.paths <- function(analysis=".")
 {
   # 1  Preamble
   if(!dir.exists(analysis))
