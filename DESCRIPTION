@@ -1,6 +1,5 @@
 Package: qcTAF
-Version: 2026.02.21
-Date: 2026-02-21
+Version: 2026.05.21
 Title: TAF Checks
 Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"), email="thisisarni@gmail.com"),
              person("Colin", "Millar", role="aut"))

@@ -33,8 +33,8 @@ qc.relative.paths <- function(analysis=".")
     return(FALSE)
 
   # 2  Test
-  code <- lapply(files, readLines)
-  pattern <- ":/|:\\\\|~/"  # absolute path
+  code <- lapply(files, readLines, warn=FALSE)
+  pattern <- ":/|:\\\\|~/|^/"  # absolute path
   absolute <- lapply(code, grepl, pattern=pattern)
   success <- !any(unlist(absolute))
 
