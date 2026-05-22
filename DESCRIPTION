@@ -1,5 +1,5 @@
 Package: qcTAF
-Version: 2026.05.22
+Version: 2026.05.23
 Title: TAF Checks
 Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"), email="thisisarni@gmail.com"),
              person("Colin", "Millar", role="aut"))

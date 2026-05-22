@@ -23,7 +23,7 @@
 #'   \code{\link{qc.initial.data}}         \tab initial data files\cr
 #'   \code{\link{qc.only.relative.paths}}  \tab scripts use only relative
 #'                                              paths\cr
-#'   \code{\link{qc.scripts.exist}}        \tab scripts exist
+#'   \code{\link{qc.all.scripts.exist}}    \tab all scripts exist
 #' }
 #'
 #' @author Arni Magnusson and Colin Millar.

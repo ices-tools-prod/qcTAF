@@ -49,7 +49,7 @@ have been processed.
 \code{\link{qc.initial.data}} checks if initial data files have the same
 contents as boot data files.
 
-\code{\link{qc.scripts.exist}} checks if scripts exist.
+\code{\link{qc.all.scripts.exist}} checks if all scripts exist.
 
 \code{\link{qc.only.relative.paths}} checks if scripts use only relative
 paths.

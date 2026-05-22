@@ -34,7 +34,7 @@
 #' \code{\link{qc.initial.data}} checks if initial data files have the same
 #' contents as boot data files.
 #'
-#' \code{\link{qc.scripts.exist}} checks if scripts exist.
+#' \code{\link{qc.all.scripts.exist}} checks if all scripts exist.
 #'
 #' \code{\link{qc.only.relative.paths}} checks if scripts use only relative
 #' paths.
@@ -62,7 +62,7 @@ qc <- function(analysis=".")
              "qc.software.bib.processed",
              "qc.software.declared",
              "qc.initial.data",
-             "qc.scripts.exist",
+             "qc.all.scripts.exist",
              "qc.only.relative.paths")
 
   # 2  Test

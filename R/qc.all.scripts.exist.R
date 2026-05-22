@@ -1,6 +1,6 @@
-#' Scripts Exist
+#' All Scripts Exist
 #'
-#' Check if TAF scripts (\verb{data.R}, \verb{model.R}, \verb{output.R}, and
+#' Check if all TAF scripts (\verb{data.R}, \verb{model.R}, \verb{output.R}, and
 #' \verb{report.R}) exist.
 #'
 #' @param analysis directory containing a TAF analysis.
@@ -14,14 +14,14 @@
 #'
 #' @examples
 #' \dontrun{
-#' qc.scripts.exist("rjm-347d")
+#' qc.all.scripts.exist("rjm-347d")
 #' }
 #'
 #' @importFrom TAF model.script
 #'
 #' @export
 
-qc.scripts.exist <- function(analysis=".")
+qc.all.scripts.exist <- function(analysis=".")
 {
   # 1  Preamble
   if(!dir.exists(analysis))

@@ -1,6 +1,7 @@
-# qcTAF 2026.05.22
+# qcTAF 2026.05.23
 
-* Renamed function qc.relative.paths() to qc.only.relative.paths().
+* Renamed function qc.scripts.exist() to qc.all.scripts.exist() and
+  qc.relative.paths() to qc.only.relative.paths().
 
 * Changed function qc.only.relative.paths() to identify /home/ as absolute path.
 
