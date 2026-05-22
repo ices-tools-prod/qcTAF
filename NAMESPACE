@@ -2,6 +2,7 @@
 
 export(qc)
 export(qc.all.scripts.exist)
+export(qc.any.scripts.exist)
 export(qc.boot.exists)
 export(qc.data.bib.exists)
 export(qc.data.bib.processed)

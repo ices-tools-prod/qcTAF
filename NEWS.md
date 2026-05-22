@@ -1,5 +1,7 @@
 # qcTAF 2026.05.23
 
+* Added function qc.any.scripts.exist().
+
 * Renamed function qc.scripts.exist() to qc.all.scripts.exist() and
   qc.relative.paths() to qc.only.relative.paths().
 
