@@ -30,15 +30,17 @@ qc.only.relative.paths <- function(analysis=".")
   on.exit(setwd(owd))
   files <- dir(pattern="\\.(R|Rmd|Rnw|r|rmd|rnw|qmd)$")
   if(length(files) == 0)
-    return(FALSE)
+    return(TRUE)
 
   # 2  Test
   code <- lapply(files, readLines, warn=FALSE)
-  code <- lapply(code, function(x)
-    grep("^[[:space:]]*#", x, invert=TRUE, value=TRUE))
   pattern <- ":/|:\\\\|~/|/home/"  # absolute path and URL
-  absolute <- lapply(code, grepl, pattern=pattern)
-  success <- !any(unlist(absolute))
+  absolute <- lapply(code, grep, pattern=pattern, value=TRUE)
+  absolute <- lapply(absolute, function(x)
+    grep("^[[:space:]]*[#%]", x, invert=TRUE, value=TRUE))  # starts with # or %
+  absolute <- lapply(absolute, function(x)            # {https} or (https)
+    grep("[\\{( ]http", x, invert=TRUE, value=TRUE))  # or space before https
+  success <- length(unlist(absolute)) == 0
 
   # 3  Result
   success

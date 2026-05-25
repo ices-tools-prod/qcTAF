@@ -1,7 +1,9 @@
 # qcTAF (development)
 
-* Improved qc.only.relative.paths() to include Rnw files when scanning code, and
-  to ignore #comment lines.
+* Improved qc.only.relative.paths() to include Rnw files when scanning code. It
+  now has a lower false-positive rate, by ignoring #comment and %comment lines,
+  as well as lines containing {https, (https, and space before https. It returns
+  TRUE when no scripts are found.
 
 
 
