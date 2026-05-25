@@ -1,3 +1,10 @@
+# qcTAF (development)
+
+* Improved qc.only.relative.paths() to include Rnw files when scanning code.
+
+
+
+
 # qcTAF 2026.05.23
 
 * Added function qc.any.scripts.exist().

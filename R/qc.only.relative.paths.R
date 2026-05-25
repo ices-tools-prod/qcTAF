@@ -1,7 +1,7 @@
 #' Only Relative Paths
 #'
-#' Check if scripts (\verb{*.R}, \verb{*.Rmd}, \verb{*.qmd} use only relative
-#' paths.
+#' Check if scripts (\verb{*.R}, \verb{*.Rmd}, \verb{Rnw}, \verb{*.qmd}) use
+#' only relative paths.
 #'
 #' @param analysis directory containing a TAF analysis.
 #'
@@ -28,13 +28,13 @@ qc.only.relative.paths <- function(analysis=".")
     return(FALSE)
   owd <- setwd(analysis)
   on.exit(setwd(owd))
-  files <- dir(pattern="\\.(R|Rmd|r|rmd|qmd)$")
+  files <- dir(pattern="\\.(R|Rmd|Rnw|r|rmd|rnw|qmd)$")
   if(length(files) == 0)
     return(FALSE)
 
   # 2  Test
   code <- lapply(files, readLines, warn=FALSE)
-  pattern <- ":/|:\\\\|~/|/home/"  # absolute path
+  pattern <- ":/|:\\\\|~/|/home/"  # absolute path and URL
   absolute <- lapply(code, grepl, pattern=pattern)
   success <- !any(unlist(absolute))
 

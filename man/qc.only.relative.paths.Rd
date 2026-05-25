@@ -13,8 +13,8 @@ qc.only.relative.paths(analysis = ".")
 \code{TRUE} if test succeeds, otherwise \code{FALSE}.
 }
 \description{
-Check if scripts (\verb{*.R}, \verb{*.Rmd}, \verb{*.qmd} use only relative
-paths.
+Check if scripts (\verb{*.R}, \verb{*.Rmd}, \verb{Rnw}, \verb{*.qmd}) use
+only relative paths.
 }
 \examples{
 \dontrun{
