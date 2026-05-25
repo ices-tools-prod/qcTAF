@@ -1,6 +1,7 @@
 # qcTAF (development)
 
-* Improved qc.only.relative.paths() to include Rnw files when scanning code.
+* Improved qc.only.relative.paths() to include Rnw files when scanning code, and
+  to ignore #comment lines.
 
 
 
